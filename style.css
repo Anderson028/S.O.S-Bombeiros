@@ -1,0 +1,208 @@
+/* Reset de margens e paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f0f4f9; /* Azul claro */
+  color: #333;
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(90deg, #007bff, #0056d2); /* Gradiente azul */
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s;
+}
+
+nav ul li a:hover {
+  color: #cce4ff; /* Azul claro */
+  transform: scale(1.1);
+}
+
+/* Conteúdo principal */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container de formulário */
+.container {
+  max-width: 700px; 
+  width: 100%;
+  margin-bottom: 20px;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.form-group button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(90deg, #0056d2, #007bff); /* Gradiente azul */
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+  border-radius: 8px;
+}
+
+.form-group button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(90deg, #003a9f, #0056d2); /* Azul escuro */
+}
+
+/* Mapa */
+#map {
+  width: 100%;
+  height: 450px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Notificação */
+#notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #008000;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+}
+
+#notification.show {
+  display: block;
+  animation: fadeOut 4s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+/* Rodapé */
+footer {
+  background: #002855; /* Azul escuro */
+  color: #cce4ff; /* Azul claro */
+  padding: 20px 40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+footer .footer-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+footer .footer-links a {
+  color: #cce4ff;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+  color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  footer .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
